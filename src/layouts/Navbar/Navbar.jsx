@@ -106,7 +106,7 @@ const Navbar = () => {
           <li className="nav_li">
             <Link
               className="menu_link"
-              href="/somos"
+              to="/somos"
               onClick={() => setToggle(false)}
             >
               Somos
@@ -115,10 +115,10 @@ const Navbar = () => {
           <li className="nav_li">
             <Link
               className="menu_link"
-              href="/equipos"
+              to="/equipos"
               onClick={() => setToggle(false)}
             >
-              Teams
+              Equipos
             </Link>
           </li>
           <li className="nav_li">
