@@ -122,7 +122,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav_li">
-            <Link className="menu_link" to="/calendario">
+            <Link
+              className="menu_link"
+              to="/calendario"
+              onClick={() => setToggle(false)}
+            >
               Calendario
             </Link>
           </li>

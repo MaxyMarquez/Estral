@@ -1,6 +1,43 @@
 .calendar-container {
   padding: 0 1rem;
 
+  .nav_calendar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .nav_calendar_ul {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      border-block: 1px solid var(--white);
+      padding-block: 1rem;
+      cursor: pointer;
+
+      .nav_calendar_li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-inline: 0.5rem;
+
+        &:hover .nav_calendar_year {
+          color: var(--orange);
+        }
+
+        .nav_calendar_month {
+          color: var(--white);
+        }
+        .nav_calendar_year {
+          color: var(--grey);
+        }
+      }
+      .active .nav_calendar_year {
+        color: var(--orange);
+      }
+    }
+  }
+
   h1 {
     color: var(--white);
     font-size: 2rem;
@@ -108,41 +145,6 @@
 @media (min-width: 992px) {
   .calendar-container {
     padding-inline: 5rem;
-
-    .nav_calendar {
-      display: flex;
-
-      .nav_calendar_ul {
-        display: flex;
-        gap: 0.5rem;
-        list-style: none;
-        border-block: 1px solid var(--white);
-        padding-block: 1rem;
-        cursor: pointer;
-
-        .nav_calendar_li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          padding-inline: 0.5rem;
-
-          &:hover .nav_calendar_year {
-            color: var(--orange);
-          }
-
-          .nav_calendar_month {
-            color: var(--white);
-          }
-          .nav_calendar_year {
-            color: var(--grey);
-          }
-        }
-        .active .nav_calendar_year {
-          color: var(--orange);
-        }
-      }
-    }
 
     h1 {
       text-align: start;
