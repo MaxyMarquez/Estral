@@ -65,6 +65,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100px;
 
         span {
           color: var(--white);
@@ -74,6 +75,7 @@
 
         p {
           color: var(--orange);
+          text-align: center;
         }
       }
 
@@ -83,6 +85,7 @@
 
       .card-result {
         span {
+          width: 50px;
           font-size: 2rem;
           color: var(--white);
         }
@@ -175,6 +178,7 @@
           height: 170px;
           .card-team1,
           .card-team2 {
+            width: 33%;
             span {
               font-size: 2rem;
             }
@@ -192,6 +196,15 @@
       .card-container {
         .card-games {
           width: 100%;
+        }
+
+        .card-container {
+          .card-body {
+            .card-team1,
+            .card-team2 {
+              width: 100%;
+            }
+          }
         }
       }
     }
