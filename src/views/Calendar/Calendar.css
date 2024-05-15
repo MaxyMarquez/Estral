@@ -65,7 +65,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100px;
+        width: 110px;
 
         span {
           color: var(--white);
