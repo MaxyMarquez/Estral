@@ -1,0 +1,189 @@
+.player-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .player {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    width: 100dvw;
+    height: 100%;
+    padding: 3rem 1rem 0 1rem;
+
+    .player-name {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--orange);
+    }
+
+    .player-nickname {
+      text-align: center;
+      font-family: "Rock Salt", cursive;
+      font-weight: 300;
+      letter-spacing: 0.3rem;
+      font-size: 3rem;
+      color: aliceblue;
+    }
+
+    .player-details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 3rem;
+      width: 100%;
+      padding-top: 1rem;
+
+      h4 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(97, 97, 97);
+      }
+
+      p {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--orange);
+      }
+
+      .player-social {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+        li {
+          list-style: none;
+
+          &:hover svg {
+            transform: translateY(-5px);
+          }
+
+          svg {
+            width: 32px;
+            height: 32px;
+            fill: aliceblue;
+          }
+        }
+      }
+    }
+    .img {
+      position: relative;
+      width: 400px;
+      padding-top: 1.5rem;
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.8s linear;
+}
+
+.fade-in-out {
+  animation: fade-in-out 0.8s linear;
+}
+
+@keyframes fade-in-out {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  25% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .player {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .player-container {
+    flex-direction: row;
+
+    .player {
+      align-items: start;
+      padding-left: 6.25rem;
+      opacity: 1;
+      margin-top: 50px;
+
+      .player-information {
+        .player-name {
+          font-size: 2rem;
+          text-align: start;
+        }
+        .player-nickname {
+          text-align: start;
+          font-size: 4rem;
+        }
+
+        .player-details {
+          justify-content: space-between;
+          flex-direction: row;
+          max-width: 430px;
+
+          h4,
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .player-container {
+    .player {
+      flex-direction: row;
+      width: 100dvw;
+      height: 100dvh;
+      margin-top: 180px;
+
+      .img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 500px;
+      }
+    }
+  }
+}

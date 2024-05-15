@@ -1,0 +1,147 @@
+.lol-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .lol-nav-staff {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      padding: 2rem 1rem 0;
+
+      li {
+        list-style: none;
+        font-size: 1rem;
+        font-weight: 200;
+        color: aliceblue;
+        padding: 0.5rem;
+        border: 1px solid var(--black);
+        background-color: var(--black);
+        cursor: pointer;
+
+        &.active {
+          border-color: var(--orange);
+          background-color: var(--orange);
+        }
+
+        &:hover {
+          border-color: var(--orange);
+        }
+      }
+    }
+  }
+
+  .lol-nav-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1rem;
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        margin-right: 20px;
+        list-style: none;
+        border: 1px solid rgb(123, 123, 123);
+        border-radius: 50%;
+        background-color: var(--black);
+        cursor: pointer;
+
+        &.active {
+          border-color: var(--orange);
+          background-color: #3a240c;
+        }
+
+        &:hover {
+          border-color: var(--orange);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 18px;
+          top: 18.5px;
+          right: calc(100% + 2px);
+          border-top: 2px dotted aliceblue;
+        }
+
+        &:nth-child(1)::after {
+          display: none;
+        }
+
+        &:nth-child(6) {
+          margin-right: 0;
+        }
+
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .lol-container {
+    flex-direction: row;
+
+    .lol-nav-staff {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: rem;
+      padding-left: 12rem;
+    }
+
+    .lol-nav-player {
+      padding-left: 3rem;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-right: 0;
+          margin-top: 20px;
+
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 18px;
+            left: 18.5px;
+            bottom: calc(100% + 2px);
+            border-left: 2px dotted aliceblue;
+          }
+
+          &:nth-child(1)::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .lol-container {
+    flex-direction: row;
+    height: calc(100dvh - 72px);
+  }
+}

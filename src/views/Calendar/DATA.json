@@ -1,0 +1,147 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "date": "2024-02-07",
+      "time": "18:00",
+      "oponent": "Movistar R7",
+      "oponent_tag": "R7",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1673451007201_IMG_3488.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "1"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 1,
+      "date": "2024-02-13",
+      "time": "18:00",
+      "oponent": "INFINITY",
+      "oponent_tag": "INF",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1631820471748_inf-2021-worlds.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 1,
+      "date": "2024-02-15",
+      "time": "18:00",
+      "oponent": "Leviatán Esports",
+      "oponent_tag": "LEV",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1643795049372_LEV-CLAROWhite.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 1,
+      "date": "2024-02-22",
+      "time": "18:00",
+      "oponent": "Isurus",
+      "oponent_tag": "ISG",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2FISG.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 1,
+      "date": "2024-02-27",
+      "time": "18:00",
+      "oponent": "All Knights",
+      "oponent_tag": "AK",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2FAK-Black-BG.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 2,
+      "date": "2024-02-28",
+      "time": "18:00",
+      "oponent": "Six Karma",
+      "oponent_tag": "6K",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1705347064525_logo6k1-1.png",
+      "match_result": {
+        "estral": "2",
+        "oponent": "1"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 3,
+      "date": "2024-03-05",
+      "time": "18:00",
+      "oponent": "Leviatán Esports",
+      "oponent_tag": "LEV",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1643795049372_LEV-CLAROWhite.png",
+      "match_result": {
+        "estral": "3",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 4,
+      "date": "2024-03-19",
+      "time": "18:00",
+      "oponent": "Movistar R7",
+      "oponent_tag": "R7",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1673451007201_IMG_3488.png",
+      "match_result": {
+        "estral": "3",
+        "oponent": "2"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 5,
+      "date": "2024-04-06",
+      "time": "18:00",
+      "oponent": "Movistar R7",
+      "oponent_tag": "R7",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1673451007201_IMG_3488.png",
+      "match_result": {
+        "estral": "3",
+        "oponent": "0"
+      },
+      "league": "Liga Latinoaméricana"
+    },
+    {
+      "id": 5,
+      "date": "2024-05-01",
+      "time": "18:00",
+      "oponent": "T1",
+      "oponent_tag": "T1",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1704375161752_T1_esports.png",
+      "match_result": {
+        "estral": "0",
+        "oponent": "2"
+      },
+      "league": "MSI"
+    },
+    {
+      "id": 5,
+      "date": "2024-05-04",
+      "time": "18:00",
+      "oponent": "PSG Talon",
+      "oponent_tag": "PSG",
+      "oponent_logo": "https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1644501567410_PSG_3.png",
+      "match_result": {
+        "estral": "0",
+        "oponent": "2"
+      },
+      "league": "MSI"
+    }
+  ]
+}

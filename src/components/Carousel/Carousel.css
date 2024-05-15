@@ -1,0 +1,36 @@
+.carousel-container {
+  display: flex;
+  gap: 5rem;
+  height: 150px;
+  padding-block: 1rem;
+  background-color: var(--orange);
+  user-select: none;
+  overflow: hidden;
+
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    list-style: none;
+    flex-shrink: 0;
+    gap: 5rem;
+    animation: scrolling 30s linear infinite;
+
+    li {
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@keyframes scrolling {
+  to {
+    transform: translateX(calc(-100% - 5rem));
+  }
+}

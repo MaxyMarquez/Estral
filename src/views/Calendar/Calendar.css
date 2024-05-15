@@ -1,0 +1,199 @@
+.calendar-container {
+  padding: 0 1rem;
+
+  h1 {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-block: 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 0;
+
+    .card-games {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      width: 500px;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding-inline: 1rem;
+        background-color: var(--black);
+
+        .card-game {
+          max-height: 2rem;
+        }
+
+        .card-date {
+          .card-link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0.8rem;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+
+            span {
+              color: var(--grey);
+            }
+          }
+        }
+      }
+    }
+
+    .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #131313;
+
+      .card-team1,
+      .card-team2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          color: var(--white);
+          padding-top: 0.3rem;
+          font-size: 1rem;
+        }
+
+        p {
+          color: var(--orange);
+        }
+      }
+
+      .card-logo {
+        height: 3.6rem;
+      }
+
+      .card-result {
+        span {
+          font-size: 2rem;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .calendar-container {
+    .card-container {
+      .card-games {
+        width: 100%;
+        max-width: 580px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .calendar-container {
+    padding-inline: 5rem;
+
+    .nav_calendar {
+      display: flex;
+
+      .nav_calendar_ul {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        border-block: 1px solid var(--white);
+        padding-block: 1rem;
+        cursor: pointer;
+
+        .nav_calendar_li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding-inline: 0.5rem;
+
+          &:hover .nav_calendar_year {
+            color: var(--orange);
+          }
+
+          .nav_calendar_month {
+            color: var(--white);
+          }
+          .nav_calendar_year {
+            color: var(--grey);
+          }
+        }
+        .active .nav_calendar_year {
+          color: var(--orange);
+        }
+      }
+    }
+
+    h1 {
+      text-align: start;
+      padding-bottom: 0;
+      font-size: 3rem;
+    }
+
+    .card-container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .card-games {
+        width: 100%;
+        max-width: 570px;
+
+        &:hover .card-header .card-date .card-link {
+          color: var(--orange);
+        }
+
+        .card-header {
+          height: 70px;
+
+          .card-game {
+            max-height: 3rem;
+          }
+          .card-date {
+            .card-link {
+              font-size: 1rem;
+            }
+          }
+        }
+        .card-body {
+          height: 170px;
+          .card-team1,
+          .card-team2 {
+            span {
+              font-size: 2rem;
+            }
+          }
+          .card-logo {
+            height: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .calendar-container {
+      .card-container {
+        .card-games {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
