@@ -1,49 +1,64 @@
 .calendar-container {
   padding: 0 1rem;
 
-  .nav_calendar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
-    .nav_calendar_ul {
-      display: flex;
-      gap: 0.5rem;
-      list-style: none;
-      border-block: 1px solid var(--white);
-      padding-block: 1rem;
-      cursor: pointer;
-
-      .nav_calendar_li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding-inline: 0.5rem;
-
-        &:hover .nav_calendar_year {
-          color: var(--orange);
-        }
-
-        .nav_calendar_month {
-          color: var(--white);
-        }
-        .nav_calendar_year {
-          color: var(--grey);
-        }
-      }
-      .active .nav_calendar_year {
-        color: var(--orange);
-      }
-    }
+  .calendar_span {
+    color: var(--orange);
+    padding-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
   }
 
-  h1 {
+  .calendar_title {
     color: var(--white);
     font-size: 2rem;
     text-align: center;
     letter-spacing: 2px;
-    padding-block: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .nav_calendar_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .nav_calendar {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 80%;
+
+      .nav_calendar_ul {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        border-block: 1px solid var(--white);
+        padding-block: 1rem;
+        cursor: pointer;
+
+        .nav_calendar_li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding-inline: 0.5rem;
+
+          &:hover .nav_calendar_year {
+            color: var(--orange);
+          }
+
+          .nav_calendar_month {
+            color: var(--white);
+          }
+          .nav_calendar_year {
+            color: var(--grey);
+          }
+        }
+        .active .nav_calendar_year {
+          color: var(--orange);
+        }
+      }
+    }
   }
 
   .card-container {
@@ -131,6 +146,36 @@
   }
 }
 
+.swiper {
+  position: initial !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.swiper-button-prev {
+  left: -50px !important;
+}
+
+.swiper-button-next {
+  right: -50px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 @media (min-width: 1280px) {
   .calendar-container {
     .card-container {
@@ -146,10 +191,23 @@
   .calendar-container {
     padding-inline: 5rem;
 
-    h1 {
+    .calendar_span {
       text-align: start;
-      padding-bottom: 0;
-      font-size: 3rem;
+      font-size: 1.5rem;
+    }
+
+    .calendar_title {
+      text-align: start;
+      padding-bottom: 1rem;
+      font-size: 4rem;
+    }
+
+    .nav_calendar_container {
+      justify-content: start;
+
+      .nav_calendar {
+        width: 55%;
+      }
     }
 
     .card-container {

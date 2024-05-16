@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import BgHexagon from "@/components/BgHexagon/BgHexagon";
-import { EstralSVG } from "@/assets/svg";
 
 import DATA from "./DATA.json";
 
@@ -8,6 +7,8 @@ import lol_logo from "@/assets/img/league-of-legends.png";
 
 // STYLES
 import "./Calendar.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 const Calendar = () => {
   const [date, setDate] = useState({ month: "", year: "" });
@@ -60,33 +61,63 @@ const Calendar = () => {
           .toUpperCase()} ${fecha.getUTCFullYear()}`;
       })
     )
-  );
+  ).sort((a, b) => {
+    const months = [
+      "ENE",
+      "FEB",
+      "MAR",
+      "ABR",
+      "MAY",
+      "JUN",
+      "JUL",
+      "AGO",
+      "SEP",
+      "OCT",
+      "NOV",
+      "DIC",
+    ];
+    const [monthA, yearA] = a.split(" ");
+    const [monthB, yearB] = b.split(" ");
+    const dateA = new Date(yearA, months.indexOf(monthA));
+    const dateB = new Date(yearB, months.indexOf(monthB));
+    return dateA - dateB;
+  });
 
   return (
     <>
       <BgHexagon>
         <div className="calendar-container">
-          <span>Estral Esports</span>
-          <h1>Calendario</h1>
-          <nav className="nav_calendar">
-            <ul className="nav_calendar_ul">
-              {mesesYAniosUnicos.map((fecha, index) => {
-                const [month, year] = fecha.split(" ");
-                return (
-                  <li
-                    key={index}
-                    className={`nav_calendar_li ${
-                      activeDate === fecha ? "active" : ""
-                    }`}
-                    onClick={() => filtrarPorMes(month, year)}
-                  >
-                    <span className="nav_calendar_month">{month}</span>
-                    <span className="nav_calendar_year">{year}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <p className="calendar_span">Estral Esports</p>
+          <h1 className="calendar_title">Calendario</h1>
+          <div className="nav_calendar_container">
+            <nav className="nav_calendar">
+              <Swiper
+                className="nav_calendar_ul"
+                loop={true}
+                freeMode={true}
+                slidesPerView={5}
+                navigation={true}
+                modules={[Navigation]}
+                initialSlide={mesesYAniosUnicos.length - 1}
+              >
+                {mesesYAniosUnicos.map((fecha, index) => {
+                  const [month, year] = fecha.split(" ");
+                  return (
+                    <SwiperSlide
+                      key={index}
+                      className={`nav_calendar_li ${
+                        activeDate === fecha ? "active" : ""
+                      }`}
+                      onClick={() => filtrarPorMes(month, year)}
+                    >
+                      <span className="nav_calendar_month">{month}</span>
+                      <span className="nav_calendar_year">{year}</span>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </nav>
+          </div>
 
           <div className="card-container">
             {datosFiltrados.map((dato, index) => (
@@ -117,7 +148,7 @@ const Calendar = () => {
                   </div>
                   <div className="card-result">
                     {dato.match_result ? (
-                      <span>
+                      <span className="">
                         {dato.match_result.estral} : {dato.match_result.oponent}
                       </span>
                     ) : (
