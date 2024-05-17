@@ -10,6 +10,7 @@ import Calendar from "./views/Calendar/Calendar";
 // STYLES
 import "./App.css";
 import "@/assets/style/logo-animation.css";
+import Contact from "./views/Contact/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/somos" element={<About />} />
         <Route path="/equipos" element={<Teams />} />
         <Route path="/calendario" element={<Calendar />} />
+        <Route path="/contacto" element={<Contact />} />
         <Route
           path="/equipos/league-of-legends"
           element={<LeagueOfLegends />}
