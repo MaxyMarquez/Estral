@@ -131,19 +131,23 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav_li">
-            <Link className="menu_link" to="">
+            <Link className="menu_link" to="" onClick={() => setToggle(false)}>
               Tienda
             </Link>
           </li>
           <li className="nav_li">
-            <Link className="menu_link" to="/contacto">
+            <Link
+              className="menu_link"
+              to="/contacto"
+              onClick={() => setToggle(false)}
+            >
               Contacto
             </Link>
           </li>
           <li className="nav_li">
             <Link
               className="menu_link"
-              href="/watch-party"
+              to="/watch-party"
               onClick={() => setToggle(false)}
             >
               Watch party
