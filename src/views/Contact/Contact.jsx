@@ -65,7 +65,7 @@ const Contact = () => {
                 Ingrese el código <span>{captchaCode}</span>
               </p>
               <input
-                type="text"
+                type="number"
                 className="contact_captcha_input"
                 onChange={handleChange}
               />
