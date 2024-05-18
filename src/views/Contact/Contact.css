@@ -113,45 +113,23 @@
         color: var(--white);
         background-color: var(--orange);
         margin-top: 1rem;
+        overflow: hidden;
         transition: 0.3s ease-in-out;
 
         .contact_btn_span:nth-child(1) {
           position: absolute;
           top: 50%;
           right: 1rem;
-          transform: translateY(50%) rotate(45deg);
+          transform: translateY(50%) rotate(-45deg);
           width: 1.5rem;
           height: 0.1rem;
           border-radius: 1rem;
           background-color: aliceblue;
           transition: 0.3s ease-in-out;
+          animation: checkmarck2 2s linear;
         }
 
         .contact_btn_span:nth-child(2) {
-          position: absolute;
-          top: 50%;
-          right: 1rem;
-          transform: translateY(50%) rotate(-45deg);
-          width: 1.5rem;
-          height: 0.1rem;
-          border-radius: 1rem;
-          background-color: aliceblue;
-          transition: 0.3s ease-in-out;
-        }
-
-        .contact_btn_active:nth-child(1) {
-          position: absolute;
-          top: 50%;
-          right: 1rem;
-          transform: translateY(50%) rotate(-45deg);
-          width: 1.5rem;
-          height: 0.1rem;
-          border-radius: 1rem;
-          background-color: aliceblue;
-          transition: 0.3s ease-in-out;
-        }
-
-        .contact_btn_active:nth-child(2) {
           position: absolute;
           top: 57.8%;
           right: 2.105rem;
@@ -160,7 +138,9 @@
           height: 0.1rem;
           border-radius: 1rem;
           background-color: aliceblue;
-          transition: 0.3s ease-in-out;
+          animation: checkmarck 2s linear;
+          animation-delay: 2s;
+          opacity: 1;
         }
       }
 
@@ -175,6 +155,7 @@
         color: var(--white);
         background-color: var(--grey);
         margin-top: 1rem;
+        z-index: 2;
       }
 
       .contact_btn_captcha_container {
@@ -204,8 +185,33 @@
           color: var(--grey);
           padding: 1rem;
           border-bottom: 1px solid;
+
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            appearance: none;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes checkmarck {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 0.75rem;
+    opacity: 1;
+  }
+}
+
+@keyframes checkmarck2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1.5rem;
   }
 }

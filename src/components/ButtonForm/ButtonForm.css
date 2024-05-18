@@ -1,0 +1,19 @@
+.btn_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--orange);
+}
+
+.btn_code {
+  width: 32px;
+  font-family: "Electrolize";
+  font-size: 1.3rem;
+  font-weight: 200;
+  letter-spacing: 0.5rem;
+  color: var(--white);
+}

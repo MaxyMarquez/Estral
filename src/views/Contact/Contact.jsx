@@ -3,10 +3,12 @@ import React from "react";
 import "./Contact.css";
 import { useEffect } from "react";
 import { useState } from "react";
+import ButtonForm from "@/components/ButtonForm/ButtonForm";
 
 const Contact = () => {
   const [isCorrect, setIsCorrect] = useState(true);
   const [captchaCode, setCaptchaCode] = useState("");
+  const [inputCode, setInputCode] = useState("");
 
   useEffect(() => {
     const generateCaptcha = () => {
@@ -19,6 +21,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setIsCorrect(e.target.value !== captchaCode);
+    setInputCode(e.target.value);
   };
 
   return (
@@ -61,16 +64,15 @@ const Contact = () => {
           </div>
           <div className="contact_btn_container">
             <div className="contact_btn_captcha_container">
-              <p>
-                Ingrese el código <span>{captchaCode}</span>
-              </p>
+              <p>Ingrese el Código:</p>
               <input
-                type="number"
+                type="text"
                 className="contact_captcha_input"
                 onChange={handleChange}
+                maxLength="6"
               />
             </div>
-            <button
+            {/* <button
               className={`${
                 !isCorrect
                   ? "contact_form_btn"
@@ -79,17 +81,12 @@ const Contact = () => {
               disabled={isCorrect}
             >
               Enviar
-              <span
-                className={`${
-                  isCorrect ? "contact_btn_span" : "contact_btn_active"
-                }`}
-              ></span>
-              <span
-                className={`${
-                  isCorrect ? "contact_btn_span" : "contact_btn_active"
-                }`}
-              ></span>
-            </button>
+            </button> */}
+            <ButtonForm
+              code={captchaCode}
+              inputCode={inputCode}
+              isCorrect={isCorrect}
+            />
           </div>
         </form>
 
