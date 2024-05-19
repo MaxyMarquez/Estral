@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <>
       <div className="contact_container">
-        <h1>Contacto</h1>
+        <h1 className="contact_title">Contacto</h1>
 
         <form className="contact_form">
           <div className="contact_form_input_container">
@@ -64,12 +64,12 @@ const Contact = () => {
           </div>
           <div className="contact_btn_container">
             <div className="contact_btn_captcha_container">
-              <p>Ingrese el Código:</p>
               <input
                 type="text"
                 className="contact_captcha_input"
                 onChange={handleChange}
                 maxLength="6"
+                placeholder="Ingrese el código"
               />
             </div>
 
