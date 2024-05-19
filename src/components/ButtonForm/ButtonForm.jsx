@@ -1,9 +1,7 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import "./ButtonForm.css";
 import Checkmark from "../Checkmark/Checkmark";
 import Crossmark from "../Crossmark/Crossmark";
-import { useEffect } from "react";
 
 const ButtonForm = ({ code, inputCode, isCorrect }) => {
   const arrCode = code.split("");
@@ -30,12 +28,14 @@ const ButtonForm = ({ code, inputCode, isCorrect }) => {
   useEffect(() => {
     checkCode();
   }, [arrInputCode]);
+
   return (
-    <>
-      <button className="btn_form" disabled={isCorrect}>
-        Codigo {checkCode()}
-      </button>
-    </>
+    <button
+      className={`btn_button ${!isCorrect ? "btn_correct" : ""}`}
+      disabled={isCorrect}
+    >
+      {checkCode()}
+    </button>
   );
 };
 

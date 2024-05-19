@@ -72,16 +72,7 @@ const Contact = () => {
                 maxLength="6"
               />
             </div>
-            {/* <button
-              className={`${
-                !isCorrect
-                  ? "contact_form_btn"
-                  : "contact_form_btn contact_form_btn_disabled"
-              }`}
-              disabled={isCorrect}
-            >
-              Enviar
-            </button> */}
+
             <ButtonForm
               code={captchaCode}
               inputCode={inputCode}

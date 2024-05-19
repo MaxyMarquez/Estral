@@ -1,4 +1,5 @@
-.btn_form {
+.btn_button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,14 +7,53 @@
   height: 60px;
   margin-top: 1rem;
   border: none;
+  background-color: var(--grey);
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.btn_button.btn_correct {
   background-color: var(--orange);
+  cursor: pointer;
+  color: var(--white);
+  position: relative;
 }
 
 .btn_code {
   width: 32px;
-  font-family: "Electrolize";
+  font-family: "Electrolize", sans-serif;
   font-size: 1.3rem;
   font-weight: 200;
   letter-spacing: 0.5rem;
   color: var(--white);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn_correct .btn_code {
+  opacity: 0;
+}
+
+.btn_correct::before {
+  content: "Enviar";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--orange);
+  animation: backgroundExpand 0.5s forwards;
+}
+
+@keyframes backgroundExpand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
