@@ -57,3 +57,12 @@
     transform: scale(1);
   }
 }
+
+@media (width >= 992px) {
+  .btn_button {
+    margin-top: 0;
+  }
+
+  .btn_code {
+  }
+}
