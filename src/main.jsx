@@ -5,12 +5,8 @@ import "./index.css";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { BrowserRouter } from "react-router-dom";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );

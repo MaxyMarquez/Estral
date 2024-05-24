@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import BgHexagon from "../../components/BgHexagon/BgHexagon";
-import {
-  TopSVG,
-  JungleSVG,
-  BotSVG,
-  MidSVG,
-  SupportSVG,
-  SubstituteSVG,
-} from "@/assets/svg";
 
 import "./LeagueOfLegends.css";
 import Players from "./Players/Players";

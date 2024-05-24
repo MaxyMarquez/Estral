@@ -27,9 +27,9 @@ const Contact = () => {
   return (
     <>
       <div className="contact_container">
-        <h1 className="contact_title">Contacto</h1>
-
         <form className="contact_form">
+          <h1 className="contact_title">Contacto</h1>
+
           <div className="contact_form_input_container">
             <input
               type="text"
@@ -38,6 +38,7 @@ const Contact = () => {
             />
             <label className="contact_form_label">Nombre</label>
           </div>
+
           <div className="contact_form_input_container">
             <input
               type="email"
@@ -46,6 +47,7 @@ const Contact = () => {
             />
             <label className="contact_form_label">Correo electrónico</label>
           </div>
+
           <div className="contact_form_input_container">
             <input
               type="text"
@@ -54,6 +56,7 @@ const Contact = () => {
             />
             <label className="contact_form_label">Asunto</label>
           </div>
+
           <div className="contact_form_input_container">
             <textarea
               type="text"
@@ -62,6 +65,7 @@ const Contact = () => {
             ></textarea>
             <label className="contact_form_label">Mensaje</label>
           </div>
+
           <div className="contact_btn_container">
             <div className="contact_btn_captcha_container">
               <input
@@ -81,7 +85,7 @@ const Contact = () => {
           </div>
         </form>
 
-        <div></div>
+        <div className="contact_data">asdasd</div>
       </div>
     </>
   );

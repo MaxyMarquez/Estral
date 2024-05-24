@@ -14,7 +14,7 @@ const Teams = () => {
         <div className="teams-container">
           <h1 className="teams-title">EQUIPOS</h1>
           <div className="temas-links">
-            <Link to={"/equipos/league-of-legends"} className="teams-link">
+            <Link to={"league-of-legends"} className="teams-link">
               <img src={imglol} alt="" />
             </Link>
             <Link to={""} className="teams-link">
